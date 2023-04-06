@@ -1,0 +1,27 @@
+@import "../../../scss/variable";
+@import "../../../scss/mixin";
+
+
+.patients-search { @include prefix(box-shadow, 0px 0px 25px rgba(0, 0, 0, 0.03)); border-radius: 10px; background-color: $white; margin-bottom: 10px; padding: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+	.ant-form-item { margin: 0;
+		.ant-input-affix-wrapper { max-width: 100%; }
+	}
+	.btn-list{
+		button { margin-right: 10px;
+			&:last-child { margin-right: 0; }
+		}
+	}
+}
+
+@include responsive(lg) {
+	.patients-search{ justify-content: flex-end;
+		.ant-form-item{ max-width: 100%; margin-bottom: 20px; }
+	}
+}
+@include responsive(xs) {
+	.patients-search {
+		.btn-list {
+			button { margin-bottom: 8px; }
+		}
+	}
+}

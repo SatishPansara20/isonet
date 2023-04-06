@@ -1,0 +1,250 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+.post-detail {
+  .post-image {
+    figure {
+      width: 80px;
+      height: 80px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .post-desc {
+    margin-left: 20px;
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      color: $title-color;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      color: $title-color;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .time {
+      font-weight: 400;
+      font-size: 12px;
+      color: $title-color;
+      display: block;
+      margin-top: 2px;
+    }
+  }
+
+  .multiple-img {
+    margin-top: 30px;
+    max-width: 650px;
+    height: 200px;
+    width: 100%;
+    cursor: pointer;
+
+    figure {
+      max-width: 100%;
+      height: 200px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .footer-post {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .like,
+    .comment {
+      display: flex;
+      align-items: center;
+      color: $theme-color;
+
+      svg {
+        max-width: 20px;
+        width: 100%;
+        margin-right: 5px;
+        color: $theme-yellow;
+      }
+    }
+
+    .comment {
+      display: flex;
+      color: $theme-color;
+      cursor: pointer;
+      text-decoration: underline;
+
+      svg {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .description {
+    margin-top: 15px;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+.swiper {
+  .swiper-pagination.swiper-pagination-bullets {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 100%;
+      display: inline-block;
+      margin: 0 4px;
+      display: inline-block;
+      cursor: pointer;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $theme-yellow;
+      }
+    }
+  }
+}
+
+.comment-list {
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, .08);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .sub-comment {
+    display: block;
+
+    .comment-post {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
+
+  .comment-post {
+    .comment-image {
+      figure {
+        width: 60px;
+        height: 60px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .comment-desc {
+      margin-left: 20px;
+
+      .title {
+        font-weight: 700;
+        font-size: 16px;
+        color: $title-color;
+
+        .time {
+          font-weight: 400;
+          font-size: 12px;
+          color: $title-color;
+          margin-left: 2px;
+        }
+      }
+
+      .company {
+        font-weight: 400;
+        font-size: 14px;
+        color: $title-color;
+        display: inline-block;
+        margin-top: 4px;
+      }
+    }
+
+    .footer-post {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .common-btn {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        color: $theme-color !important;
+        background-color: transparent !important;
+
+        &.bottom-up {
+          svg {
+            @include prefix(transform, rotate(180deg));
+          }
+
+        }
+
+        svg {
+          max-width: 30px;
+          width: 100%;
+          margin-right: 5px;
+          color: $theme-color;
+        }
+      }
+
+      .replay {
+        display: flex;
+        align-items: center;
+
+        .common-btn {
+          margin-right: 15px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .like-btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .description {
+      margin-top: 15px;
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}

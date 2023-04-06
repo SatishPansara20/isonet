@@ -1,0 +1,94 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+
+.login-wrap{
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    padding: 30px 15px;
+}
+.login-detail{
+    max-width: 600px;
+    margin:0 auto;
+    width: 100%;
+    .bg{
+        background-color: $theme-color;
+        border-radius: 10px;
+        padding:40px 30px;
+        position: relative;
+    }
+    .title{
+        margin: 0 0 50px;
+        color: $white;
+    }
+    .login-form{
+        .ant-btn-primary{
+           svg{margin-left: 8px;}
+           &:hover,&:focus{background: $theme-yellow; border-color:$theme-yellow; color: $theme-color;}
+           &.back-btn{
+                svg{
+                    margin: 0 8px 0 0;
+                    vertical-align: middle;
+                    color: #000;
+                }
+            }
+        }
+        .form-group{
+            // .ant-input{
+            //     @include prefix(box-shadow, 0px 0px 25px rgba(0, 0, 0, 0.03));
+            //     border-radius: 10px;
+            //     background-color: $white;
+            //     min-height: 50px;
+            //     padding: 10px 20px;
+            //     &:hover{
+            //         border:1px solid rgba( 0,0,0,.3);
+            //     }
+            // }
+            .ant-form-item-control-input-content{
+                .ant-input-password{
+                    border-radius: 10px;
+                    padding: 4px 20px;
+                    .ant-input{
+                        min-height: 40px;
+                        border: none;
+                    }
+                }
+            }
+            .f-pwd{
+                font-family: $fonts-opensans;
+                font-weight: 400;
+                font-size: 14px;
+                color: $white;
+            }
+        }
+    }
+    .note{
+        p{
+            font-family: $fonts-opensans;
+            font-weight: 400;
+            font-size: 14px;
+            color: $title-color;
+            padding: 20px 30px 0;
+            .link{
+                color: $title-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+@include responsive(sm) {
+    .login-detail{
+        .bg{
+            padding:30px 20px;
+        }
+        .note{
+            p{
+                padding: 20px 20px 0;
+            }
+        }
+    }
+    
+}

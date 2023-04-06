@@ -1,0 +1,28 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+.dashboard-info {
+    padding: 30px;
+    background-color: $theme-yellow;
+    border-radius: 10px;
+    margin: 10px;
+    .number {
+        font-family: $fonts-opensans;
+        font-weight: 700;
+        font-size: 28px;
+        color: $title-color;
+    }
+
+    .d-title {
+        font-family: $fonts-opensans;
+        font-weight: 400;
+        font-size: 18px;
+        color: $title-color;
+    }
+}
+
+@include responsive(md) {
+    .dashboard-info{
+        margin-bottom: 30px;   
+    }
+}
